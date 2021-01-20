@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+// Extra hide functions for demo
+            $('#slidetoggle').hide(function(){
+            })
+            $('#slidedown').hide(function(){                
+            })
+            $('#fadein').hide(function(){                
+            })
+
+
+            // css function
+            $('#cssfunc').click(function(){
+                $('#css').css('color', 'red');
+            });
+            // slidetoggle function
+            $('#slidetoggling').click(function(){
+                $('#slidetoggle').slideToggle(function(){
+                })
+            })
+            // append function
+            $('#appending').click(function(){
+                $('#append').append('<p>Im a new paragraph!</p>');
+            });
+            // addClass & removeClass functions
+            $('#addingclass').click(function(){
+                $('#addclass').addClass('ligthgreen');
+            });
+            $('#removingclass').click(function(){
+                $('#addclass').removeClass('ligthgreen');
+            });
+            // show & hide functions
+            $('#showing').click(function(){
+                $('#showhide').show();
+            })
+            $('#hiding').click(function(){
+                $('#showhide').hide();
+            })
+            // toggle function
+            $('#toggling').click(function(){
+                $('#toggle').toggle();
+            })
+            // slidedown & slideup functions
+            $('#slidingup').click(function(){
+                $('#slideup').slideUp();
+            })
+            $('#slidingdown').click(function(){
+                $('#slidedown').slideDown();
+            })
+            // fadein & fadeout functions            
+            $('#fadingin').click(function(){
+                $('#fadein').fadeIn();
+            })
+            $('#fadingout').click(function(){
+                $('#fadeout').fadeOut();
+            })
+            //before & after
+            $('#insbefore').click(function(){
+                $('#beforeafter').before('<p>Im a paragraph!</p>');
+            })
+            $('#insafter').click(function(){
+                $('#beforeafter').after('<p>Im a paragraph!</p>');
+            })
+            //html function
+            $('#htmlsetting').click(function(){
+                $('#htmlset').html('<p>Im a whole different paragraph now! I replaced all the content that was previously here!!</p>');
+            })
+            //attr function
+            $('#attribute').click(function(){
+                $('#attr').attr('width', '500px');
+                $('#attr').attr('height', '100px');
+            })
+            // value function
+            $('#value').click(function(){
+                $('#val').val('Hey im a text!');
+            })
+            // text function
+            $('#txt').click(function(){
+                $('#text').text('Some new text!');
+            })
+        });
+    </script>
+    <style>
+        *{
+            margin: 15px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .division{
+            height: 5px;
+            background-color: lightblue;
+            margin: 10px;
+        }
+        .ligthgreen{
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="division"></div>
+    <!-- css function -->
+    <button id="cssfunc">css</button>
+    <p id="css">Click the button to add css atribute 'color' 'red' to this paragraph!</p>
+    <div class="division"></div>
+
+    <!-- slidetoggle function -->
+    <button id="slidetoggling">Slidetoggle</button>
+    <p>Click the button to slidetoggle a hidden image!</p>
+    <img src="" id="slidetoggle" alt="" width="100px" height="50px">
+    <div class="division"></div>
+    
+    <!-- append function -->
+    <button id="appending">Append</button> 
+    <p id="append">Click the button to append a new paragraph!</p>
+    <div class="division"></div>
+
+    <!-- addclass & removeClass functions -->
+    <button id="addingclass">addClass</button>
+    <button id="removingclass">removeClass</button>
+    <p id="addclass">Click each button to add or remove class 'lightgreen' to this paragraph!</p>
+    <div class="division"></div>
+
+    <!-- show & hide functions -->
+    <button id="showing">Show</button>
+    <button id="hiding">Hide</button>
+    <p id="showhide">Click each button to show or hide this paragraph!</p>
+    <div class="division"></div>
+
+    <!-- toggle function -->
+    <button id="toggling">Toggle</button>
+    <p id="toggle" >Click the button to toggle between show or hide this paragraph!</p>
+    <div class="division"></div>
+    
+    <!-- slidedown & slideup functions --> 
+    <button id="slidingup">SlideUp</button>
+    <button id="slidingdown">SlideDown</button>
+    <p id="slideup">Click respective button to slide this paragraph up!</p>
+    <p>Click respective button to slide a paragraph down!</p>
+    <p id="slidedown">Im a paragraph!</p>
+    <div class="division"></div>
+
+    <!-- fadein & fadeout functions -->
+    <button id="fadingin">fadeIn</button>
+    <button id="fadingout">fadeOut</button>
+    <p>Click the respective button to fade a paragraph in!</p>
+    <p id="fadein">Im a paragraph!</p>
+    <p id="fadeout">Click the respective button to fade this paragraph out!</p>
+    <div class="division"></div>
+
+    <!-- before & after functions -->
+    <button id="insbefore">Before</button>
+    <button id="insafter">After</button>
+    <p id="beforeafter">Click the respective button to insert a paragraph before or after this one</p>
+    <div class="division"></div>
+
+    <!-- html function (set) -->
+    <button id="htmlsetting">htmlSet</button>
+    <p id="htmlset">Click the respective button to set different html values for this paragraph!</p>
+    <div class="division"></div>
+
+    <!-- attr function (set) -->
+    <button id="attribute">attr</button>
+    <p>Click the button to set different attributes for the next image!</p>
+    <img src=""  id="attr" alt="" width="100px" height="50px">
+    <div class="division"></div>
+
+    <!-- val function -->
+    <button id="value">Val</button>
+    <p>Click the button to insert a text value in the input!</p>
+    <input type="text" id="val">
+    <div class="division"></div>
+
+    <!-- text function -->
+    <button id="txt">text</button>
+    <p id="text">Click the button to replace this paragraph with some new text!</p>
+    <div class="division"></div>
+</body>
+</html>
